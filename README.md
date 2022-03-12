@@ -16,30 +16,33 @@ NB: This is a very basic version
 
 ```
 route:/wallet/create
-body: { "email" : "johndoe@gmail.com" }
+body ex: { "email" : "johndoe@gmail.com" }
 ```
 
 - Credit a wallet
 ```
 route: /wallet/credit
-body: { "amount" : "500", wallet_address : 647077292}
+body ex: { "amount" : "500", wallet_address : 647077292}
 ```
 
 - Debit a wallet
 ```
 route: /wallet/debit
-body: { "amount" : "500", wallet_address : 647077292}
+
+body ex: { "amount" : "500", wallet_address : 647077292}
 ```
 - Activate a wallet
 ```
-route: /wallet/{wallet_address}
-body: nil
+route: /wallet/activate/{wallet_address}
+
+body ex: nil
 ```
 
 - Deactivate a wallet
 ```
-route: /wallet/{wallet_address}
-body: nil
+route: /wallet/deactivate/{wallet_address}
+
+body ex: nil
 ```
 
 ## 🤓 Author(s)
