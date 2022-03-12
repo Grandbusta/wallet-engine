@@ -16,12 +16,14 @@ NB: This is a very basic version
 
 ```
 route:/wallet/create
+
 body ex: { "email" : "johndoe@gmail.com" }
 ```
 
 - Credit a wallet
 ```
 route: /wallet/credit
+
 body ex: { "amount" : "500", wallet_address : 647077292}
 ```
 
