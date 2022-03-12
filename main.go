@@ -26,10 +26,10 @@ func handleRequests() {
 	r := mux.NewRouter().StrictSlash(true)
 	s := r.PathPrefix("/wallet").Subrouter()
 	s.HandleFunc("/create", controllers.CreateWallet).Methods("POST")
-	s.HandleFunc("/debit", controllers.DebitWallet)
-	s.HandleFunc("/create", controllers.CreditWallet)
-	s.HandleFunc("/activate", controllers.ActivateWallet)
-	s.HandleFunc("/deactivate", controllers.DeactivateWallet)
+	s.HandleFunc("/debit", controllers.DebitWallet).Methods("POST")
+	s.HandleFunc("/credit", controllers.CreditWallet).Methods("POST")
+	s.HandleFunc("/activate/{wallet}", controllers.ActivateWallet).Methods("POST")
+	s.HandleFunc("/deactivate/{wallet}", controllers.DeactivateWallet).Methods("POST")
 	log.Fatal(http.ListenAndServe(":8080", r))
 }
 
