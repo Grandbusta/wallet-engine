@@ -1,6 +1,7 @@
 # Wallet engine API - Go🔥
 
-A wallent engine built with Golang.
+A wallet engine built with Golang.
+
 NB: This is a very basic version
 
 ## Technologies Used
